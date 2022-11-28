@@ -1,5 +1,44 @@
-#hmm {
-  width: 100px;
-  height: auto;
-  margin: 20px;
+body {
+  background-color: #59328f;
+  display: flex;
+  justify-content: center;
+}
+
+}
+
+.container {
+
+}
+
+
+#tpcnt {
+  color: white;
+  display: flex;
+
+}
+
+.tmp {
+font-size: 50px;
+margin: 20px;
+
+}
+
+.tmpdate {
+margin: 6px;
+font-size: 20px;
+
+}
+
+#minmax {
+  margin-bottom: 2px;
+}
+
+#dt {
+  margin-top: 2px;
+}
+
+.imgg {
+margin-top: 1px;
+
+
 }
