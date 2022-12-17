@@ -75,9 +75,25 @@ margin-top: 1px;
   width: 40px;
   transition: 500ms;
   padding: 5px;
-  border: none;
   border-radius: 1000px;
   margin-left: 10px;
+  background-color: black;
+  color:white;
+  fill: white;
+  border: none;
+  background-color: rgba(61, 25, 99, 55%);
+  backdrop-filter: blur(5px);
+
+}
+
+.btn:hover {
+  background-color: rgba(61, 25, 99, 75%);
+  transition: 500ms;
+}
+
+.btnico {
+  color:white;
+  fill: white;
 }
 
 .part2 {
@@ -116,10 +132,21 @@ margin-top: 1px;
 .future {
   width: 100%;
   height: fit-content;
+  display: flex;
+  justify-content: center;
   background-color: rgba(61, 25, 99, 5%);
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 10px 1px rgba(33 7 61 / 50%);
+  border-radius: 10px;
+  transition: 200ms;
+  padding-top: 10px;
+}
 
+
+.future:hover {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: 200ms;
 }
 
 
@@ -146,4 +173,30 @@ margin-top: 1px;
 .rightsun {
   margin-right: 3px;
   margin-left: auto;
+}
+
+.day {
+  background-color: rgba(61, 25, 99, 5%);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  margin: 2px;
+  transition: 400ms;
+  width: fit-content;
+}
+
+.day:hover {
+  transition: 400ms;
+  box-shadow: 0px 0px 10px 1px rgba(33 7 61 / 50%);
+}
+
+.waterr {
+  margin-right:10px;
+  fill: white;
+  margin-top: 10px;
+}
+
+.humidityico {
+  margin-right: 0px;
+  margin-left: auto;
+  display: flex;
 }
