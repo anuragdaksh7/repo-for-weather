@@ -1,7 +1,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, #5125b8 , #942bc2);
+  background-image: linear-gradient(to right, #5125b8 , #8016a1);
   color: white;
 }
 
@@ -140,6 +140,7 @@ margin-top: 1px;
   border-radius: 10px;
   transition: 200ms;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -181,7 +182,10 @@ margin-top: 1px;
   border-radius: 10px;
   margin: 2px;
   transition: 400ms;
+  margin-bottom: 2px;
   width: fit-content;
+  height: fit-content;
+  min-width: 50px;
 }
 
 .day:hover {
@@ -199,4 +203,29 @@ margin-top: 1px;
   margin-right: 0px;
   margin-left: auto;
   display: flex;
+}
+
+.imggen {
+  height: fit-content;
+  padding: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.futuretemp {
+  height: fit-content;
+  padding: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.generalv2 {
+  height: fit-content;
+  padding: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.datev2 {
+  height: fit-content;
+  padding: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
