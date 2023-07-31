@@ -2,7 +2,7 @@
 
 ## get current weather forecast for any city/ state/ country in the World
 
-powered by openweather api https://openweathermap.org/
+<p>powered by <a href = "https://openweathermap.org/">openweather</a> api</p> 
 
 <ol>
 <h3>steps to install:</h3>
