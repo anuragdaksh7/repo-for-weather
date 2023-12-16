@@ -23,14 +23,14 @@ export default function AirCondition (props) {
 
             <div className="flex justify-between mt-4">
                 <div className="w-1/2">
-                    <SmallCard text="Real Feel" val="10°" icon="thermometer" />
+                    <SmallCard text="Real Feel" val={`${props.feels}°`} icon="thermometer" />
                     <br />
                     <SmallCard text="Chance of rain" val="0%" icon="water_drop" />
                 </div>
                 <div className="w-1/2">
-                    <SmallCard text="Wind" val="0.2 km/h" icon="air" />
+                    <SmallCard text="Wind" val={`${props.wind} km/hr`} icon="air" />
                     <br />
-                    <SmallCard text="UV Index" val="3" icon="brightness_high" />
+                    <SmallCard text="UV Index" val={props.uv} icon="brightness_high" />
                 </div>
                 {/* <TempCard weather="cloud" time = "6"/>
                 <TempCard weather="rainy" time = "7"/>

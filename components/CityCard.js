@@ -6,9 +6,10 @@ export default function CityCard(props){
                 <h1 className="mt-16 text-6xl font-bold">{props.temp}°</h1>
             </div>
             <div className="">
-            <span className="material-symbols-outlined pe-8 select-none text-yellow-400">
+            {/* <span className="material-symbols-outlined pe-8 select-none text-yellow-400">
                 sunny
-            </span>
+            </span> */}
+            <img alt="weather icon" src={props.icon} />
             </div>
         </div>
     )
