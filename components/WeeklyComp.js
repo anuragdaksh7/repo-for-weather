@@ -3,8 +3,8 @@ import { useEffect, useState } from "react"
 
 function DailyCard(props){
     return (
-        <div className="flex justify-between items-center text-gray-400 py-2">
-            <h1>Today</h1>
+        <div className="flex justify-between items-center text-gray-400 py-3">
+            <h1>{props.day}</h1>
             <div className="flex items-center">
                 {/* <p className="text-gray-200 material-symbols-outlined mr-3">{props.icon}</p> */}
                 <img width={48} src={props.icon} alt="" />
@@ -98,7 +98,8 @@ export default function WeeklyComp (props) {
                 </h1>
                 {obj.map((data, index) => (
                     // console.log(data)
-                    <DailyCard key={index} maxT={data.max} minT={data.min} icon={data.icon} text={data.summary} />
+                    
+                    <DailyCard day={(index==0)?"Today":data.day} key={index} maxT={data.max} minT={data.min} icon={data.icon} text={data.summary} />
                 ))}
                 {/* <DailyCard maxT="12" minT="9" icon="sunny" text="sunny" />
                 <DailyCard maxT="12" minT="9" icon="rainy" text="rainy" />

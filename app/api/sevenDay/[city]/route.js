@@ -1,6 +1,7 @@
 function objConstructor (_obj) {
     var obj = new Object();
-    obj.day = _obj.date;
+    var day = new Date(_obj.date);
+    obj.day = day.toString().split(" ")[0];
     obj.icon = _obj.day.condition.icon;
     obj.summary = _obj.day.condition.text;
     obj.max = _obj.day.maxtemp_c
