@@ -9,7 +9,7 @@ export default function CityCard(props){
             {/* <span className="material-symbols-outlined pe-8 select-none text-yellow-400">
                 sunny
             </span> */}
-            <img alt="weather icon" src={props.icon} />
+            <img alt="weather icon" src={props.icon.replace("64x64","128x128")} />
             </div>
         </div>
     )
