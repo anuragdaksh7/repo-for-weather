@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 
-function DailyCard(props){
+function DailyCard(props) {
     return (
         <div className="flex justify-between items-center text-gray-400 py-3">
             <h1>{props.day}</h1>
@@ -18,62 +18,12 @@ function DailyCard(props){
 
 
 
-export default function WeeklyComp (props) {
-    const [obj,setObj] = useState([
-        {
-            "day": "2023-12-16",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
-            "summary": "Partly cloudy",
-            "max": 7.1,
-            "min": 4.4
-        },
-        {
-            "day": "2023-12-17",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
-            "summary": "Patchy rain possible",
-            "max": 7.8,
-            "min": 6.2
-        },
-        {
-            "day": "2023-12-18",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
-            "summary": "Patchy rain possible",
-            "max": 5.8,
-            "min": -2
-        },
-        {
-            "day": "2023-12-19",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/332.png",
-            "summary": "Moderate snow",
-            "max": -0.6,
-            "min": -4.3
-        },
-        {
-            "day": "2023-12-20",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
-            "summary": "Partly cloudy",
-            "max": 3.8,
-            "min": -1.1
-        },
-        {
-            "day": "2023-12-21",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
-            "summary": "Partly cloudy",
-            "max": 3.7,
-            "min": 1.3
-        },
-        {
-            "day": "2023-12-22",
-            "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
-            "summary": "Patchy rain possible",
-            "max": 3.1,
-            "min": 2
-        }
-    ]);
+export default function WeeklyComp(props) {
+    const [obj, setObj] = useState([]);
     const handleUpdate = async (city) => {
-        const response = await fetch("/api/sevenDay/"+city);
+        const response = await fetch("/api/sevenDay/" + city);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         // const {des} = data;
         setObj(data.Ar);
 
@@ -82,12 +32,12 @@ export default function WeeklyComp (props) {
     useEffect(() => {
         // Perform actions when city changes
         // console.log('City changed:', props.cityy);
-        try{
+        try {
             handleUpdate(props.cityy);
-        }catch(e){
+        } catch (e) {
             console.log()
         }
-    
+
     }, [props.cityy]);
 
     return (
@@ -96,11 +46,11 @@ export default function WeeklyComp (props) {
                 <h1 className="text-gray-400 text-sm font-semibold mb-8 mt-3">
                     7-DAY FORECAST
                 </h1>
-                {obj.map((data, index) => (
-                    // console.log(data)
-                    
-                    <DailyCard day={(index==0)?"Today":data.day} key={index} maxT={data.max} minT={data.min} icon={data.icon} text={data.summary} />
-                ))}
+                {
+                    obj.map((data, index) => (
+                        <DailyCard day={(index == 0) ? "Today" : data.day} key={index} maxT={data.max} minT={data.min} icon={data.icon} text={data.summary} />
+                    ))
+                }
                 {/* <DailyCard maxT="12" minT="9" icon="sunny" text="sunny" />
                 <DailyCard maxT="12" minT="9" icon="rainy" text="rainy" />
                 <DailyCard maxT="12" minT="9" icon="cloudy" text="cloudy" />

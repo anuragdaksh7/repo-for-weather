@@ -7,11 +7,11 @@ import { useState } from "react"
 
 
 
-export default function MainComp(params) {
-    const [city,setCity] = useState("Delhi");
+export default function MainComp(props) {
+    const [city,setCity] = useState(props.cityy);
     const [pageData,setPageData] = useState({
         "newObj": {
-            "location": "Delhi",
+            "location": "New Delhi",
             "temp": 11,
             "feels": 10,
             "wind": 0.2,
@@ -33,17 +33,17 @@ export default function MainComp(params) {
                 <input className="w-full bg-[#212c3d] h-10 rounded-lg ps-4 outline-none text-md font-semibold text-gray-300" type="text" placeholder="Search for cities" value={city} onChange={(e)=>{
                     setCity(e.target.value);
                     
-                    // console.log(params.cityy);
+                    // console.log(props.cityy);
                 }}
                 onKeyDown={(e) => {
                     if(e.key == "Enter"){
-                        params.setCityy(e.target.value);
+                        props.setCityy(e.target.value);
                         UpdatePage(city);
                     }
                 }} />
             </div>
             <CityCard city={pageData.newObj.location} temp={pageData.newObj.temp} icon={pageData.newObj.icon} />
-            <TodayCard />
+            <TodayCard cityy={props.cityy} />
             <AirCondition feels={pageData.newObj.feels} wind={pageData.newObj.wind} uv={pageData.newObj.uv} />
         </div>
     )

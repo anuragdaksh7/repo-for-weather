@@ -4,7 +4,7 @@ import WeeklyComp from '@/components/WeeklyComp'
 import { useState } from 'react'
 
 export default function Home() {
-  const [cityy, setCityy] = useState("Delhi");
+  const [cityy, setCityy] = useState("New Delhi");
   return (
 
     <div className='block sm:flex justify-between px-16 mt-6'>
