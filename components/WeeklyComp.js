@@ -3,14 +3,14 @@ import { useEffect, useState } from "react"
 
 function DailyCard(props) {
     return (
-        <div className="flex justify-between items-center text-gray-400 py-3">
-            <h1>{props.day}</h1>
+        <div className="flex justify-between items-center text-gray-400  py-3">
+            <h1 className=" font-mono">{props.day.padEnd(7," ")}</h1>
             <div className="flex items-center">
                 {/* <p className="text-gray-200 material-symbols-outlined mr-3">{props.icon}</p> */}
                 <img width={48} src={props.icon} alt="" />
                 <h3 className="text-gray-300 text-sm">{props.text}</h3>
             </div>
-            <p className="">{props.maxT}/ {props.minT}</p>
+            <p className="">{Math.floor(props.maxT)}/ {Math.floor(props.minT)}</p>
 
         </div>
     )
@@ -23,7 +23,7 @@ export default function WeeklyComp(props) {
     const handleUpdate = async (city) => {
         const response = await fetch("/api/sevenDay/" + city);
         const data = await response.json();
-        // console.log(data);
+        console.log(data);
         // const {des} = data;
         setObj(data.Ar);
 
@@ -41,8 +41,8 @@ export default function WeeklyComp(props) {
     }, [props.cityy]);
 
     return (
-        <div className="w-1/3">
-            <div className="bg-[#212c3d] px-2 sm:px-8 mt-16 mx-2 py-6 rounded-lg">
+        <div className="w-full sm:w-1/3">
+            <div className="bg-[#212c3d] px-4 sm:px-8 mt-8 sm:mt-16 mx-2 py-6 rounded-lg">
                 <h1 className="text-gray-400 text-sm font-semibold mb-8 mt-3">
                     7-DAY FORECAST
                 </h1>

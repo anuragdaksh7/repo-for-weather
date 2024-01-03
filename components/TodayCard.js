@@ -57,11 +57,11 @@ export default function TodayCard(props) {
 
     return (
         <div className="bg-[#212c3d] px-2 sm:px-6 mt-8 py-6 rounded-lg">
-            <h1 className="text-gray-400 text-sm font-semibold">TODAY'S FORECAST</h1>
+            <h1 className="text-gray-400 text-center sm:text-left text-sm font-semibold">TODAY'S FORECAST</h1>
             <div className=" sm:flex justify-around mt-4">
                 {
                     obj.map((data, index) => (
-                        <TempCard time={data.day} icon={data.icon} temp={data.temp} />
+                        <TempCard key={index} time={data.day} icon={data.icon} temp={data.temp} />
                     ))
                 }
                 {/* <TempCard weather="cloud" time="6" />

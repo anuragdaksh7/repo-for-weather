@@ -16,7 +16,7 @@ function SmallCard(props){
 
 export default function AirCondition (props) {
     return (
-        <div className="bg-[#212c3d] px-2 sm:px-6 mt-8 py-6 rounded-lg">
+        <div className="bg-[#212c3d] px-4 sm:px-6 mt-8 py-6 rounded-lg">
 
             <h1 className="text-gray-400 text-sm font-semibold">AIR CONDITIONS</h1>
 
